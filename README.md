@@ -62,7 +62,15 @@ ssh -p 69 root@69.69.69.69
 - Now paste this command on this terminal to access your GPU server
 
 ## 📥 Installation
-
+```bash
+sudo fallocate -l 10G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+```
 1. **Install `sudo`**
 ```bash
 sudo apt update && sudo apt install -y 
