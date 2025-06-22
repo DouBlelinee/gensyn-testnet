@@ -65,11 +65,11 @@ ssh -p 69 root@69.69.69.69
 
 1. **Install `sudo`**
 ```bash
-apt update && apt install -y sudo
+sudo apt update && sudo apt install -y 
 ```
 2. **Install other dependencies**
 ```bash
-sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof nano unzip iproute2 build-essential gcc g++
+sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof nano unzip iproute2 build-essential gcc g++ htop
 ```
 3. **Install CUDA**
 ```
